@@ -1,0 +1,6 @@
+torch>=1.10
+transformers>=4.36
+tqdm
+scikit-learn
+faker
+numpy
