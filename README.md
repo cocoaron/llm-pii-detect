@@ -6,18 +6,18 @@ This repository provides a framework to **automatically build, augment, and eval
 
 ## Components  
 
-### 1. Prompt Generation for PII Templates (`/create_dataset)  
+### 1. Prompt Generation for PII Templates (`/create_dataset/*')  
 - Generate natural language sentences with **PII placeholders** (e.g., `{FULL_NAME}`, `{EMAIL}`).  
 - Support diverse domains and contexts (finance, healthcare, government, etc.).  
 - Export generated templates in structured JSON format.  
 
-### 2. Dataset Construction (`/preprocess`)  
+### 2. Dataset Construction (`/preprocess/*`)  
 - Convert generated sentences into dataset structure with placeholders.
 - **LADAM-based augmentation**: Layer-wise attention-driven augmentation.  
 - **Faker-based injection**: Replace placeholders with realistic synthetic PII values.  
 - **BIO Tagging**: Apply KLUE/Roberta tokenizer for token-level BIO labeling.  
 
-### 4. Model Evaluation (`eval_transformers`)  
+### 4. Model Evaluation (`eval_transformers.sh')  
 - Benchmark KLUE/Roberta series models on generated datasets.  
 - Provide precision/recall/F1 evaluation scripts.  
 - Enable direct comparison between augmentation strategies.  
