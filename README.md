@@ -25,11 +25,9 @@ This repository provides a framework to **automatically build, augment, and eval
 ---
 
 ## Current Design  
-
-### Threat Model  
 PII-bearing datasets are often scarce or privacy-restricted. This framework avoids handling real PII by generating synthetic datasets with placeholders and Faker-injected values.  
 
-### Overall Design  
+### Project pipeline
 1. Generate unstructured sentences with placeholders using LLM prompts.  
 2. Automatically construct dataset schema.  
 3. Apply augmentation (LADAM, Faker, BIO tagging).  
@@ -43,22 +41,3 @@ PII-bearing datasets are often scarce or privacy-restricted. This framework avoi
 - **Augmentation Framework** combining LADAM and Faker injection.  
 - **Evaluation Suite** for model comparison and reproducibility.  
 
----
-
-## Arising Challenges  
-
-- Ensuring **synthetic PII diversity** without bias.  
-- Balancing between **augmentation volume** and **model performance gains**.  
-- Comparing augmentation strategies consistently across different models and benchmarks.  
-- Extending framework for multilingual datasets beyond Korean.  
-
----
-
-## Future Work  
-
-- Expand augmentation pipeline to graph-based and context-aware injection methods.  
-- Explore few-shot fine-tuning of larger LLMs for PII detection.  
-- Integrate real-world benchmark datasets for hybrid evaluation.  
-- Automate dataset versioning and release for reproducibility.  
-
----
